@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:t1_2020130027/first_page.dart';
+import 'package:t1_2020130027/second_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutter Demo'),
         ),
-        body: const FirstPage(),
+        body: const SecondPage(),
       ),
     );
   }

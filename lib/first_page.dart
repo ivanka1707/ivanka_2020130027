@@ -1,3 +1,5 @@
+import 'dart:ui_web';
+
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatelessWidget {
@@ -6,8 +8,7 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
+      body: ListView(
         children: [
           Container(
             color: Colors.blue,
@@ -55,113 +56,143 @@ class FirstPage extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20),
+                        fontSize: 25),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(25.0),
-                  child: TextField(
-                    decoration: InputDecoration(
+                SizedBox(
+                  height: 95,
+                  child: Padding(
+                    padding: const EdgeInsets.all(25.0),
+                    child: TextField(
+                      decoration: InputDecoration(
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(100.0),
+                          borderRadius: BorderRadius.circular(30.0),
                         ),
                         labelText: "Search here",
-                        suffixIcon: const Icon(Icons.search)),
+                        labelStyle: const TextStyle(color: Colors.white),
+                        suffixIcon: const Icon(Icons.search),
+                        filled: true,
+                        fillColor: Colors.lightBlue,
+                      ),
+                    ),
                   ),
                 ),
               ],
             ),
           ),
-          const Text('Popular Courses'),
-          SizedBox(
-            child: Column(
-              children: [
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.blueGrey,
-                          ),
-                          child: const Column(
-                            children: [
-                              Text('Gambar'),
-                              Text('Reading'),
-                              Text('11 Taks'),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.blueAccent,
-                          ),
-                          child: const Column(
-                            children: [
-                              Text('Gambar'),
-                              Text('Reading'),
-                              Text('11 Taks'),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+          Column(
+            children: [
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: Text(
+                    "Popular Course",
+                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+                  ),
                 ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.blueGrey,
-                          ),
-                          child: const Column(
-                            children: [
-                              Text('Gambar'),
-                              Text('Reading'),
-                              Text('11 Taks'),
-                            ],
-                          ),
+              ),
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blueGrey,
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              '/images/1.png',
+                              height: 150,
+                              fit: BoxFit.fill,
+                            ),
+                            const Text('Reading'),
+                            const Text('11 Taks'),
+                          ],
                         ),
                       ),
                     ),
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.blueAccent,
-                          ),
-                          child: const Column(
-                            children: [
-                              Text('Gambar'),
-                              Text('Reading'),
-                              Text('11 Taks'),
-                            ],
-                          ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blueAccent,
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              '/images/2.png',
+                              height: 150,
+                              fit: BoxFit.fill,
+                            ),
+                            const Text('Reading'),
+                            const Text('11 Taks'),
+                          ],
                         ),
                       ),
                     ),
-                  ],
-                ),
-              ],
-            ),
+                  ),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blueGrey,
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              '/images/3.png',
+                              height: 150,
+                              fit: BoxFit.fill,
+                            ),
+                            const Text('Reading'),
+                            const Text('11 Taks'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blueAccent,
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              '/images/4.png',
+                              height: 150,
+                              fit: BoxFit.fill,
+                            ),
+                            const Text('Reading'),
+                            const Text('11 Taks'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),

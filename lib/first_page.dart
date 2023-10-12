@@ -1,6 +1,7 @@
 import 'dart:ui_web';
 
 import 'package:flutter/material.dart';
+import 'package:t1_2020130027/second_page.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -72,7 +73,7 @@ class FirstPage extends StatelessWidget {
                         labelStyle: const TextStyle(color: Colors.white),
                         suffixIcon: const Icon(Icons.search),
                         filled: true,
-                        fillColor: Colors.lightBlue,
+                        fillColor: const Color.fromARGB(102, 140, 214, 255),
                       ),
                     ),
                   ),
@@ -112,6 +113,17 @@ class FirstPage extends StatelessWidget {
                             ),
                             const Text('Reading'),
                             const Text('11 Taks'),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const SecondPage(),
+                                  ),
+                                );
+                              },
+                              child: const Text("See More"),
+                            ),
                           ],
                         ),
                       ),
@@ -124,7 +136,7 @@ class FirstPage extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blueAccent,
+                          color: Colors.grey,
                         ),
                         child: Column(
                           children: [
@@ -133,8 +145,19 @@ class FirstPage extends StatelessWidget {
                               height: 150,
                               fit: BoxFit.fill,
                             ),
-                            const Text('Reading'),
-                            const Text('11 Taks'),
+                            const Text('Listening'),
+                            const Text('10 Taks'),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const SecondPage(),
+                                  ),
+                                );
+                              },
+                              child: const Text("See More"),
+                            ),
                           ],
                         ),
                       ),
@@ -151,7 +174,7 @@ class FirstPage extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blueGrey,
+                          color: Colors.grey,
                         ),
                         child: Column(
                           children: [
@@ -160,8 +183,19 @@ class FirstPage extends StatelessWidget {
                               height: 150,
                               fit: BoxFit.fill,
                             ),
-                            const Text('Reading'),
-                            const Text('11 Taks'),
+                            const Text('Vocabulary'),
+                            const Text('21 Taks'),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const SecondPage(),
+                                  ),
+                                );
+                              },
+                              child: const Text("See More"),
+                            ),
                           ],
                         ),
                       ),
@@ -174,7 +208,7 @@ class FirstPage extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blueAccent,
+                          color: Colors.blueGrey,
                         ),
                         child: Column(
                           children: [
@@ -183,8 +217,19 @@ class FirstPage extends StatelessWidget {
                               height: 150,
                               fit: BoxFit.fill,
                             ),
-                            const Text('Reading'),
-                            const Text('11 Taks'),
+                            const Text('Grammar'),
+                            const Text('86 Taks'),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const SecondPage(),
+                                  ),
+                                );
+                              },
+                              child: const Text("See More"),
+                            ),
                           ],
                         ),
                       ),
